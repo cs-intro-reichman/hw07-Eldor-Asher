@@ -1,7 +1,7 @@
 /** Computes the binomial(n,k) function. */
 public class Binomial {	
     public static void main(String[] args) {
-		System.out.println(binomial1(9, 2));
+		System.out.println(binomial(9, 2));
 		//// Uncomment the version of binomial that you want to test
  
 		// Testing the basic binomial implementation:
@@ -12,14 +12,14 @@ public class Binomial {
 	}
 
 	// Computes the Binomial function, basic version.
-	//public static int binomial1(int n, int k) { 
-		//if (k > n) return 0;
-		//if (k == 0 || n == 0) return 1;
-		//return binomial1(n - 1, k) + binomial1(n - 1, k - 1);
-	// }
+	public static int binomial1(int n, int k) { 
+		if (k > n) return 0;
+		if (k == 0 || n == 0) return 1;
+		return binomial1(n - 1, k) + binomial1(n - 1, k - 1);
+	}
 	
 	// Computes the Binomial function, efficiently
-	public static int binomial1(int n, int k) {
+	public static int binomial(int n, int k) {
 		int BIN [][] = new int[n+1][k+1];
 		for (int i=0; i<BIN.length; i++){
 			for (int j=0; j< BIN[0].length; j++){
