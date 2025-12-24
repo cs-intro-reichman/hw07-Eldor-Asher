@@ -19,7 +19,7 @@ public class Binomial {
 	}
 	
 	// Computes the Binomial function, efficiently
-	public static int binomial(int n, int k) {
+	public static long binomial(int n, int k) {
 		int BIN [][] = new int[n+1][k+1];
 		for (int i=0; i<BIN.length; i++){
 			for (int j=0; j< BIN[0].length; j++){
